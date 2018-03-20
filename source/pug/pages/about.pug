@@ -1,0 +1,73 @@
+extends ../layout
+
+block title
+    title About
+
+
+block header
+    include ../sections/header
+
+block content
+    svg(viewbox="0 0 1000 100" preserveAspectRatio="none").triangle.triangle_fill_light-green
+        polygon(points="0,0 0,100 500,100")
+    svg(viewbox="0 0 1000 100" preserveAspectRatio="none").triangle.triangle_fill_white
+        polygon(points="1000,0 1000,100 500,100")
+
+    .container
+        .about
+            .about__left
+                .about__info
+                    .title.about-info__title
+                        h1.title__text Обо мне
+
+                    .info.about__intro
+                        .info__img
+                            img(src="#").info__my-photo
+                        .title.info__title
+                            h2.title__text Кто я
+                        .info__description
+                            p
+
+            .about__tight
+                .about__skill
+                    .title.about-skill__title
+                        h2.title__text Чем я могу быть вам полезен
+                    .skill__description
+                        p
+                    .skill__section
+                        .skill__name-title Frontend
+                        ul.skill__list
+                            each  skills in ['HTML5', 'CSS3', 'JavaScript & jQuery']
+                                li.skill__item
+                                    svg.skill__circle
+                                    .skill__text= skills
+
+                    .skill__section
+                        .skill__name-title Backend
+                        ul.skill__list
+                            each  skills in ['PHP', 'mySQL', 'Node.js & npm']
+                                li.skill__item
+                                    svg.skill__circle
+                                    .skill__text= skills
+
+                    .skill__section
+                        .skill__name-title WorkFlow
+                        ul.skill__list
+                            each  skills in ['Git', 'Gulp', 'Bower']
+                                li.skill__item
+                                    svg.skill__circle
+                                    .skill__text= skills
+
+
+    section.map
+        .contacts
+            .title.contacts__title
+                h2  Контакты
+            ul.contacts__list
+                each contacts in ['Скайп', 'Mail', 'Tel', 'Addres']
+                    li.contacts__title
+                        a(href="#").contacts__link= contacts
+
+
+block footer
+    include ../sections/footer

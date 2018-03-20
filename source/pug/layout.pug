@@ -1,0 +1,27 @@
+include _mixin/_mixins
+include _mixin/vars
+
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+        block title
+            title Главная страничка
+
+        link(rel='stylesheet', href='assets/css/foundation.css')
+        link(rel='stylesheet', href='assets/css/app.css')
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    body
+
+        .wrapper
+            block header
+
+
+            block content
+
+        block footer

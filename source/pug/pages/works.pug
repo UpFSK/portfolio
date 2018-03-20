@@ -1,0 +1,62 @@
+extends ../layout
+
+block header
+    include ../sections/header
+
+block content
+    svg.triangle
+    svg.triangle
+
+    .title.works__h1-title
+        h1 Мои работы
+
+    section.works-slider
+        .works-slider__left
+            .works__about.works-slider__aboyt
+                .title.works__h2-title
+                    h2
+                .worksr__description
+                    ul.works-skill__list
+                        each skills in ['HTML5', 'CSS3', 'JavaScript']
+                            li.works-skill__item= skills
+                    .works__btn
+                        a(href="#").works__link
+
+        .works-slider__right
+            .works
+                ul.works__list
+                    - for (var i = 0; i < x; i++)
+                        li.works__item
+                            .works__img
+                                img(src="#")
+
+    section.comments-and-form
+        .title.comments__title
+            h1 Что обо мне говорят
+
+        ul.comments__list
+            - for (var i = 0; i < comments; i++)
+                li.comments__item
+                    .comment.works__comments
+                        .comments__photo
+                            img(src="#")
+                        .comments__text
+                            p
+                        .comment__who
+                            .comments__name
+                            .comments__position
+
+        .works__forma
+            .title.forma__title
+                h2 Связаться со мной
+
+            form.forma
+                input(type='text' placeholder='Имя' name='Name').forma__name
+                input(type='email' placeholder='Email' name='email').forma__email
+                textarea.forma__text
+                .forma__btn
+                    button(type='submit').btn-submit
+                    button(type='reset').btn-reset
+
+block footer
+    include ../sections/footer

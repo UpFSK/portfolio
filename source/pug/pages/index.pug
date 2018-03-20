@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+    ul
+        each webs in ['about', 'blog', 'works']
+            li
+                a(href=`${webs}.html`)= webs

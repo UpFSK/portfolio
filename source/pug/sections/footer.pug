@@ -1,0 +1,16 @@
+footer.footer
+    .footer__left
+        .footer__text
+
+    .footer__center
+        +nav('footer-nav', ['Мои работы', 'Обо мне', 'Блог', 'Авторизация'])
+        ul.social.footer__social
+            each social in ['vk', 'git', 'ln']
+                li.social__item
+                    a(href="#").social__link= social
+
+    .footer__right
+        .footer__comments
+            .footer__comments-text
+                p
+            .footer__comments-author

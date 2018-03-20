@@ -1,0 +1,22 @@
+header.header
+    ul.social.header__social
+        each social in ['vk', 'github', 'linkedin']
+            li.social__item
+                a(href="#").social__link= social
+                    +icon(social)
+
+    .hamburgers
+        +icon('hamburger')
+
+    .bg-text-portfolio
+        +icon('portfolio_header')
+
+
+    .user.header__user
+        .user__photo
+            img(src="assets/img/my-photo-users-block.png").user__my-photo
+        .user__name Кисляков Александр
+        .user__description Личный блог веб разработчика
+
+    .arrow-down
+        +icon('arrow_down')

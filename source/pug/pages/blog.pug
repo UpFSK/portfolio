@@ -1,0 +1,47 @@
+extends ../layout
+
+block title
+    title Blog
+
+block header
+    header.header
+        ul.social.header__social
+            each social in ['vk', 'git', 'ln']
+                li.social__item
+                    a(href="#").social__link= social
+
+        .hamburgers
+
+        .bg-text-portfolio
+
+        .user.header__user
+            .user__photo
+                img(src="#").user__my-photo
+
+        .title.header__title-blog
+            h1 Блог
+
+        .header__dedescription-blog
+
+block content
+    svg.triangle.triangle_blog
+    svg.triangle.triangle_blog
+
+    .blog
+        .blog__left
+            .name-articles
+                +nav('name-articles', articles1, 0)
+        .blog__right
+            ul.articles
+                each articlesName in articles1
+                    li.articles__item
+                        .articles__title
+                            h2= articlesName
+                        .articles__data
+                        .articles__text
+                            p
+
+
+
+block footer
+    include ../sections/footer

@@ -1,0 +1,15 @@
+.triangle {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 0px;
+  position: absolute;
+  top: $height-header - 190;
+}
+
+.triangle_fill_light-green {
+  fill: $bg-about-left;
+}
+
+.triangle_fill_white {
+  fill: $bg-about-right;
+}
